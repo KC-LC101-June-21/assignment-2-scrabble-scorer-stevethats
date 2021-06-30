@@ -144,6 +144,8 @@ function transform(object) {
   change ("5");
   change ("8");
   change ("10");
+
+  holder[" "] = 0;
   
   return holder;
 };
