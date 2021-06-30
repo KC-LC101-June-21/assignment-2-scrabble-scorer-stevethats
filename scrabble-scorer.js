@@ -95,23 +95,17 @@ const scoringAlgorithms = [
   {
     name: "Simple Score", 
     description: "Each letter is worth 1 point.", 
-    scoringFunction: function (word) {
-      simpleScore(word)
-    }
+    scoringFunction: simpleScore
   }, 
   {
     name: "Bonus Vowels", 
     description: "Vowels are 3 pts, consonants are 1 pt.", 
-    scoringFunction: function (word) {
-      vowelBonusScore(word)
-    }
+    scoringFunction: vowelBonusScore
   }, 
   {
     name: "Scrabble", 
     description: "The traditional scoring algorithm.", 
-    scoringFunction: function (word) {
-      scrabbleScore(word);
-    }
+    scoringFunction: scrabbleScore
   }
 ];
 
