@@ -116,6 +116,11 @@ function scorerPrompt() {
   )
   let algorithmNum = input.question("Enter 0, 1, or 2: ");
   
+  while (!(algorithmNum === "0" || algorithmNum === "1" || algorithmNum === "2")) {
+    console.log(`\n"${algorithmNum}" is an invalid input. Input must be 0, 1, or 2.`)
+    algorithmNum = input.question("Enter 0, 1, or 2: ");
+  }
+
   return scoringAlgorithms[algorithmNum];
 }
 
