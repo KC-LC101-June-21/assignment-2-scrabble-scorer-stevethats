@@ -106,13 +106,6 @@ const scoringAlgorithms = [
       return vowelBonusScore(word)
     }
   }, 
-  /*{
-    name: "Scrabble", 
-    description: "The traditional scoring algorithm.", 
-    scoringFunction: function (word) {
-      return oldScrabbleScorer(word)
-    }
-  }*/
   {
     name: "Scrabble", 
     description: "The same old scoring algorithm.", 
@@ -128,6 +121,7 @@ function scorerPrompt() {
     "0 - Simple: One point per character\n1 - Vowel Bonus: Vowels are worth 3 points\n2 - Scrabble: Uses scrabble point system"
   )
   let algorithmNum = input.question("Enter 0, 1, or 2: ");
+  
   return scoringAlgorithms[algorithmNum];
 }
 
